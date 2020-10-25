@@ -41,24 +41,21 @@ public class MainActivity extends AppCompatActivity {
 
         if(spSelectedOption.equalsIgnoreCase(charString)){
             String enteredUserText = this.inputTxt.getText().toString();
-            int charsCount = enteredUserText.length();
+            int charsCount = TextCounter.getCharsCount(enteredUserText);
 
             this.txtResult.setText(String.valueOf(charsCount));
         }
         else{
-            Toast.makeText(this, "Not implemented", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "Nothing to count", Toast.LENGTH_SHORT).show();
         }
         if(spSelectedOption.equalsIgnoreCase(wordsString)){
             String enteredUserText = this.inputTxt.getText().toString();
-            enteredUserText = enteredUserText.replace("\n"," ");
-            enteredUserText = enteredUserText.replace(","," ");
-            enteredUserText = enteredUserText.replace("."," ");
-            String[] textArray = enteredUserText.split(" ");
+            int wordsCount = TextCounter.getWordsCount(enteredUserText);
 
-            this.txtResult.setText(String.valueOf(textArray.length));
+            this.txtResult.setText(String.valueOf(wordsCount));
         }
         else{
-            Toast.makeText(this, "Not implemented", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "Nothing to count", Toast.LENGTH_SHORT).show();
         }
 
     }
