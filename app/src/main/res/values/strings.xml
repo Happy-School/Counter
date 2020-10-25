@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Counter</string>
-    <string name="display_chars" />
+    <string name="selection_chars">Chars</string>
+    <string name="selection_words">Words</string>
     <string-array name="counter_display">
-        <item>Char</item>
+        <item>Chars</item>
         <item>Words</item>
     </string-array>
 </resources>

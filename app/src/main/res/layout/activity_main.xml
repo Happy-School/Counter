@@ -7,16 +7,16 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/txtView"
-        android:layout_width="122dp"
-        android:layout_height="79dp"
-        android:text="Hello World!"
+        android:id="@+id/txtResult"
+        android:layout_width="125dp"
+        android:layout_height="51dp"
+        android:text=" "
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintHorizontal_bias="0.099"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.283" />
+        app:layout_constraintVertical_bias="0.319" />
 
     <EditText
         android:id="@+id/inputTxt"
@@ -25,8 +25,8 @@
         android:layout_marginBottom="76dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/txtView"
+        android:text="Dog,Cat.Fish Horse "
+        app:layout_constraintBottom_toTopOf="@+id/txtResult"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.64"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,20 +35,22 @@
 
     <Button
         android:id="@+id/btnToCount"
-        android:layout_width="167dp"
-        android:layout_height="67dp"
-        android:text="Button"
+        android:layout_width="169dp"
+        android:layout_height="47dp"
+        android:onClick="onBtnCount"
+        android:text="Count"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtView"
-        app:layout_constraintVertical_bias="0.211" />
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toEndOf="@+id/txtResult"
+        app:layout_constraintTop_toBottomOf="@+id/spCounterType"
+        app:layout_constraintVertical_bias="0.068" />
 
     <Spinner
         android:id="@+id/spCounterType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/txtView"
+        app:layout_constraintBottom_toTopOf="@+id/txtResult"
         app:layout_constraintEnd_toEndOf="@+id/inputTxt"
         app:layout_constraintStart_toStartOf="@+id/inputTxt"
         app:layout_constraintTop_toBottomOf="@+id/inputTxt" />
