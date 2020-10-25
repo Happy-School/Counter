@@ -41,21 +41,29 @@ public class MainActivity extends AppCompatActivity {
 
         if(spSelectedOption.equalsIgnoreCase(charString)){
             String enteredUserText = this.inputTxt.getText().toString();
-            int charsCount = TextCounter.getCharsCount(enteredUserText);
+            if(enteredUserText.length() != 0) {
+                int charsCount = TextCounter.getCharsCount(enteredUserText);
+                this.txtResult.setText(String.valueOf(charsCount));
+            }
+            else if (enteredUserText.length() == 0){
+                int charsCount = TextCounter.getCharsCount(enteredUserText);
+                this.txtResult.setText(String.valueOf(charsCount));
+                Toast.makeText(this, "Nothing to count", Toast.LENGTH_SHORT).show();
+            }
 
-            this.txtResult.setText(String.valueOf(charsCount));
-        }
-        else{
-            Toast.makeText(this, "Nothing to count", Toast.LENGTH_SHORT).show();
         }
         if(spSelectedOption.equalsIgnoreCase(wordsString)){
-            String enteredUserText = this.inputTxt.getText().toString();
-            int wordsCount = TextCounter.getWordsCount(enteredUserText);
+                String enteredUserText = this.inputTxt.getText().toString();
+            if(enteredUserText.length() != 0){
+                int wordsCount = TextCounter.getWordsCount(enteredUserText);
 
-            this.txtResult.setText(String.valueOf(wordsCount));
-        }
-        else{
-            Toast.makeText(this, "Nothing to count", Toast.LENGTH_SHORT).show();
+                this.txtResult.setText(String.valueOf(wordsCount));
+            }
+            else if (enteredUserText.length() == 0){
+                int wordsCount = TextCounter.getWordsCount(enteredUserText);
+                this.txtResult.setText(String.valueOf(wordsCount));
+                Toast.makeText(this, "Nothing to count", Toast.LENGTH_SHORT).show();
+            }
         }
 
     }
